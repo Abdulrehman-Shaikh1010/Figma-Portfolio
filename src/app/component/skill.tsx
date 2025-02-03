@@ -70,8 +70,8 @@ const Skill = () => {
                       viewport={{ once: true }}
                       className="absolute bg-blue-500 h-2 rounded-lg"
                       aria-valuenow={skill.level}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
+                      aria-valuemin={0}  // ✅ Fixed (Converted to number)
+                      aria-valuemax={100} // ✅ Fixed (Converted to number)
                     />
                   </div>
                   <p className="font-bold text-blue-400 text-right mt-1 text-sm">{skill.level}%</p>
